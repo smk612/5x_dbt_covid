@@ -37,7 +37,7 @@ growth_factor_of_new_cases,
 growth_factor_of_new_deaths
 */
 SELECT
-DATE(date),
+DATE(date) AS date,
 d.location_iso_code,
 location,
 island,

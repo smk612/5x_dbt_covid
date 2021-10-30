@@ -1,6 +1,6 @@
 
 SELECT
-DATE(date),
+DATE(date) AS date,
 d.location_iso_code,
 location,
 island,

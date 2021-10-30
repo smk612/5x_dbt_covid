@@ -1,5 +1,5 @@
 /*Creating Location Table with only details related to location*/
-CREATE TABLE location_details
+{{ config(materialized='table') }}
 AS
 (
     SELECT DISTINCT

@@ -1,7 +1,6 @@
 /*Creating Location Table with only details related to location*/
 {{ config(materialized='table') }}
-with source_data as
-(
+
     SELECT DISTINCT
     location_iso_code,
     location,
@@ -23,4 +22,3 @@ with source_data as
     latitude
 
     FROM FIVETRAN_INTERVIEW_DB.GOOGLE_SHEETS.COVID_19_INDONESIA_SOUMIK_DE
-)

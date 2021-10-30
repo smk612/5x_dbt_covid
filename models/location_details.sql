@@ -1,6 +1,6 @@
 /*Creating Location Table with only details related to location*/
 {{ config(materialized='table') }}
-AS
+with source_data as
 (
     SELECT DISTINCT
     location_iso_code,
@@ -24,5 +24,3 @@ AS
 
     FROM FIVETRAN_INTERVIEW_DB.GOOGLE_SHEETS.COVID_19_INDONESIA_SOUMIK_DE
 )
-
-ALTER TABLE location_details ALTER PRIMARY KEY USING COLUMNS (location_iso_code);

@@ -1,7 +1,7 @@
 /*Creating Daily Cases Table with Daily Case details related to each location*/
 {{ config(materialized='table') }}
 SELECT
-date,
+DATE(date),
 location_iso_code,
 new_cases,
 new_deaths,
